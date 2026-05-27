@@ -57,9 +57,7 @@ export default (
     overrides['crust'] = '#000000'
   }
   if (grayTone && !darker) {
-    overrides['mantle'] = monokaiGrayTone.mantle
-    overrides['base'] = monokaiGrayTone.base
-    overrides['crust'] = monokaiGrayTone.crust
+    Object.assign(overrides, monokaiGrayTone)
   }
   let scheme = generateTheme(variant, overrides);
   const accentColors = {
