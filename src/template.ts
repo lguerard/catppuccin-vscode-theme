@@ -37,6 +37,12 @@ const terminalColors = {
   }
 }
 
+const monokaiGrayTone = {
+  mantle: '#1f201c',
+  base: '#272822',
+  crust: '#161613'
+}
+
 export default (
   variant: SchemeName,
   bordered: boolean,
@@ -51,9 +57,9 @@ export default (
     overrides['crust'] = '#000000'
   }
   if (grayTone && !darker) {
-    overrides['mantle'] = '#1f201c'
-    overrides['base'] = '#272822'
-    overrides['crust'] = '#161613'
+    overrides['mantle'] = monokaiGrayTone.mantle
+    overrides['base'] = monokaiGrayTone.base
+    overrides['crust'] = monokaiGrayTone.crust
   }
   let scheme = generateTheme(variant, overrides);
   const accentColors = {

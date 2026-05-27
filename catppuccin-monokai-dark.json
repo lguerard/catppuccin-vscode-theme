@@ -56,7 +56,7 @@
 			}
 		},
 		{
-			"name": "Monokai TOML section headers",
+			"name": "TOML section headers",
 			"scope": [
 				"entity.name.section.toml",
 				"entity.name.section.group-title.toml",
