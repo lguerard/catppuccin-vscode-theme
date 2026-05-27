@@ -677,10 +677,12 @@ export default (
           'entity.name.section.group-title.toml',
           'entity.other.attribute-name.table.toml',
           'support.type.table.toml',
-          'meta.tag.table.toml'
+          'support.type.property-name.table.toml',
+          'meta.tag.table.toml',
+          'punctuation.definition.table.toml'
         ],
         settings: {
-          fontStyle: 'italic',
+          fontStyle: 'bold italic',
           foreground: scheme.common.accent.hex()
         }
       },
