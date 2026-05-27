@@ -20,7 +20,7 @@ const filePath = (variant: string, ext?: string) =>
   console.log(`Updated ${variant}`)
 })
 
-['blue', 'green', 'teal'].map((accent: AccentName) => {
+;['blue', 'green', 'teal'].map((accent: AccentName) => {
   const accented = JSON.stringify(template('mocha', false, false, accent), null, '\t')
   fs.writeFileSync(filePath('mocha', `${accent}-accent`), accented)
   console.log(`Updated mocha ${accent} accent`)

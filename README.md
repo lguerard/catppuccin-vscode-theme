@@ -39,6 +39,10 @@
 
 - Standard ![Mocha](assets/mocha.png)
 - Bordered ![Mocha Bordered](assets/mocha-bordered.png)
+- Accent options (non-pink):
+  - Catppuccin Mocha Blue Accent (Recommended)
+  - Catppuccin Mocha Green Accent
+  - Catppuccin Mocha Teal Accent
 
 ## Development
 
