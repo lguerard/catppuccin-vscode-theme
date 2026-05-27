@@ -56,6 +56,7 @@ export default (
     overrides['base'] = '#020202'
     overrides['crust'] = '#000000'
   }
+  // Darker mode intentionally takes precedence over gray tone.
   if (grayTone && !darker) {
     Object.assign(overrides, monokaiGrayTone)
   }
