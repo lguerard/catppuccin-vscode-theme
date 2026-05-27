@@ -1,0 +1,92 @@
+{
+	"name": "Catppuccin Monokai Dark",
+	"type": "dark",
+	"include": "./catppuccin-mocha.json",
+	"colors": {
+		"editor.background": "#272822",
+		"editor.foreground": "#f8f8f2",
+		"sideBar.background": "#1f201c",
+		"activityBar.background": "#1f201c",
+		"panel.background": "#1f201c",
+		"statusBar.background": "#1f201c",
+		"titleBar.activeBackground": "#1f201c",
+		"tab.activeBackground": "#272822",
+		"tab.inactiveBackground": "#1f201c",
+		"editorCursor.foreground": "#f8f8f2",
+		"editorLineNumber.activeForeground": "#f92672"
+	},
+	"tokenColors": [
+		{
+			"name": "Monokai Keyword and Storage",
+			"scope": [
+				"keyword",
+				"storage"
+			],
+			"settings": {
+				"foreground": "#f92672"
+			}
+		},
+		{
+			"name": "Monokai Strings",
+			"scope": [
+				"string"
+			],
+			"settings": {
+				"foreground": "#e6db74"
+			}
+		},
+		{
+			"name": "Monokai Functions",
+			"scope": [
+				"entity.name.function",
+				"support.function"
+			],
+			"settings": {
+				"foreground": "#a6e22e"
+			}
+		},
+		{
+			"name": "Monokai Constants and Numbers",
+			"scope": [
+				"constant.numeric",
+				"constant.language"
+			],
+			"settings": {
+				"foreground": "#ae81ff"
+			}
+		},
+		{
+			"name": "Monokai TOML section headers",
+			"scope": [
+				"entity.name.section.toml",
+				"entity.name.section.group-title.toml",
+				"support.type.table.toml"
+			],
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#66d9ef"
+			}
+		},
+		{
+			"name": "Monokai TOML keys",
+			"scope": [
+				"variable.key.toml",
+				"support.type.property-name.table.toml",
+				"meta.key.toml"
+			],
+			"settings": {
+				"foreground": "#a6e22e"
+			}
+		},
+		{
+			"name": "Monokai TOML table punctuation",
+			"scope": [
+				"punctuation.definition.table.toml",
+				"punctuation.definition.keyValue.toml"
+			],
+			"settings": {
+				"foreground": "#f8f8f2"
+			}
+		}
+	]
+}
