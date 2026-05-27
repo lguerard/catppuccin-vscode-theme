@@ -507,6 +507,20 @@
 			}
 		},
 		{
+			"name": "TOML section headers",
+			"scope": [
+				"entity.name.section.toml",
+				"entity.name.section.group-title.toml",
+				"entity.other.attribute-name.table.toml",
+				"support.type.table.toml",
+				"meta.tag.table.toml"
+			],
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#ca9ee6"
+			}
+		},
+		{
 			"name": "JSX Component",
 			"scope": [
 				"support.class.component"

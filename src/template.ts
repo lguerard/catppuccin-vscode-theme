@@ -37,12 +37,23 @@ const terminalColors = {
   }
 }
 
-export default (variant: SchemeName, bordered: boolean, darker: boolean = false, accent: AccentName = 'mauve') => {
+export default (
+  variant: SchemeName,
+  bordered: boolean,
+  darker: boolean = false,
+  accent: AccentName = 'mauve',
+  grayTone: boolean = false
+) => {
   let overrides = {};
   if (darker) {
     overrides['mantle'] = '#010101'
     overrides['base'] = '#020202'
     overrides['crust'] = '#000000'
+  }
+  if (grayTone && !darker) {
+    overrides['mantle'] = '#1f201c'
+    overrides['base'] = '#272822'
+    overrides['crust'] = '#161613'
   }
   let scheme = generateTheme(variant, overrides);
   const accentColors = {
@@ -652,6 +663,20 @@ export default (variant: SchemeName, bordered: boolean, darker: boolean = false,
         scope: ['entity.name.tag', 'meta.tag.sgml'],
         settings: {
           foreground: scheme.syntax.tag.hex()
+        }
+      },
+      {
+        name: 'TOML section headers',
+        scope: [
+          'entity.name.section.toml',
+          'entity.name.section.group-title.toml',
+          'entity.other.attribute-name.table.toml',
+          'support.type.table.toml',
+          'meta.tag.table.toml'
+        ],
+        settings: {
+          fontStyle: 'italic',
+          foreground: scheme.common.accent.hex()
         }
       },
       {
