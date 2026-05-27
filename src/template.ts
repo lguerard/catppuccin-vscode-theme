@@ -1,6 +1,7 @@
 import { generateTheme, variants } from '../colours/'
 
 export type SchemeName = 'latte' | 'frappe' | 'macchiato' | 'mocha';
+export type AccentName = 'mauve' | 'blue' | 'green' | 'teal';
 
 const catppuccin = {
   latte: generateTheme('latte'),
@@ -36,7 +37,7 @@ const terminalColors = {
   }
 }
 
-export default (variant: SchemeName, bordered: boolean, darker: boolean = false) => {
+export default (variant: SchemeName, bordered: boolean, darker: boolean = false, accent: AccentName = 'mauve') => {
   let overrides = {};
   if (darker) {
     overrides['mantle'] = '#010101'
@@ -44,9 +45,17 @@ export default (variant: SchemeName, bordered: boolean, darker: boolean = false)
     overrides['crust'] = '#000000'
   }
   let scheme = generateTheme(variant, overrides);
+  const accentColors = {
+    mauve: scheme.common.accent,
+    blue: scheme.syntax.entity,
+    green: scheme.syntax.string,
+    teal: scheme.syntax.regexp
+  };
+
+  scheme.common.accent = accentColors[accent];
 
   if (darker && bordered) {
-    scheme.ui.line.hex = () => `${variants[variant].mauve.hex}26` //15%
+    scheme.ui.line.hex = () => `${accentColors[accent].hex()}26` //15%
   }
 
   return {

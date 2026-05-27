@@ -111,6 +111,21 @@
         "label": "Catppuccin Monokai Dark",
         "uiTheme": "vs-dark",
         "path": "./catppuccin-monokai-dark.json"
+      },
+      {
+        "label": "Catppuccin Mocha Blue Accent (Recommended)",
+        "uiTheme": "vs-dark",
+        "path": "./catppuccin-mocha-blue-accent.json"
+      },
+      {
+        "label": "Catppuccin Mocha Green Accent",
+        "uiTheme": "vs-dark",
+        "path": "./catppuccin-mocha-green-accent.json"
+      },
+      {
+        "label": "Catppuccin Mocha Teal Accent",
+        "uiTheme": "vs-dark",
+        "path": "./catppuccin-mocha-teal-accent.json"
       }
     ],
     "iconThemes": [

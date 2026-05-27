@@ -1,6 +1,6 @@
 import * as fs from 'fs'
 import * as path from 'path'
-import template, { SchemeName } from './template'
+import template, { AccentName, SchemeName } from './template'
 
 const filePath = (variant: string, ext?: string) =>
   path.join(process.cwd(), `/catppuccin-${variant}${ext ? `-${ext}` : ''}.json`);
@@ -18,4 +18,10 @@ const filePath = (variant: string, ext?: string) =>
   fs.writeFileSync(filePath(variant, 'darker-bordered'), darkerBordered)
 
   console.log(`Updated ${variant}`)
+})
+
+['blue', 'green', 'teal'].map((accent: AccentName) => {
+  const accented = JSON.stringify(template('mocha', false, false, accent), null, '\t')
+  fs.writeFileSync(filePath('mocha', `${accent}-accent`), accented)
+  console.log(`Updated mocha ${accent} accent`)
 })
